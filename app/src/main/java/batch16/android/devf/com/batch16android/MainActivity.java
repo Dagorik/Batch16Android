@@ -1,15 +1,22 @@
 package batch16.android.devf.com.batch16android;
 
+import android.graphics.Color;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView userName;
     EditText edUserName;
+    Button btnOk;
+    Button btnGuardar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
         userName = (TextView) findViewById(R.id.tv_user_name);
         edUserName = (EditText) findViewById(R.id.et_user_name);
+        btnOk = (Button) findViewById(R.id.btn_ok);
+        btnGuardar = (Button) findViewById(R.id.btn_guardar);
+
+        btnOk.setOnClickListener(this);
+        btnGuardar.setOnClickListener(this);
 
         Log.e("MyLog", "OnCreate");
     }
@@ -26,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.e("MyLog", "onResume");
-        String texto = userName.getText()+"";
-        Log.e("MyLogResume", texto);
+
 
     }
 
@@ -35,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.e("MyLog", "onStart");
-        userName.setText("Batch 16 Android ");
 
     }
 
@@ -45,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         Log.e("MyLog", "onStop");
 
 
-
     }
 
     @Override
@@ -53,13 +62,44 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         Log.e("MyLog", "onPause");
 
-        Log.e("MyLogPause",edUserName.getText().toString());
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Log.e("MyLog", "onDestroy");
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        String name = edUserName.getText().toString();
+
+        switch (view.getId()) {
+
+            case R.id.btn_ok:
+
+                if (name.isEmpty()) {
+                    Snackbar.make(view, "Ingresa un nombre porfis", Snackbar.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "HOLA " + name, Toast.LENGTH_SHORT).show();
+                }
+
+                break;
+
+            case R.id.btn_guardar:
+
+                if (name.isEmpty()) {
+                    Snackbar.make(view, "Ingresa un nombre porfis", Snackbar.LENGTH_SHORT).show();
+                } else {
+                    userName.setText("Usuario: "+ name);
+                }
+
+                break;
+
+        }
+
 
     }
 }

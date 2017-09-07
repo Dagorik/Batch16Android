@@ -10,14 +10,28 @@
     <TextView
         android:id="@+id/tv_user_name"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:text="Ingresa tu usuario"
-        android:textSize="20sp"/>
+        android:layout_height="wrap_content"
+        android:text="Usuario: "
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/et_user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingresa tu usuario"/>
+        android:hint="Ingresa tu usuario" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Ok" />
+
+    <Button
+        android:id="@+id/btn_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Guardar" />
 
 </LinearLayout>
