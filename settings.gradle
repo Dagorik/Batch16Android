@@ -1,1 +1,1 @@
-include ':app', ':acore'
+include ':app', ':layouts'
