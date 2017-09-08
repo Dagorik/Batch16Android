@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText edUserName;
     Button btnOk;
     Button btnGuardar;
+    Button btnPrueba, btnPrueba2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +28,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edUserName = (EditText) findViewById(R.id.et_user_name);
         btnOk = (Button) findViewById(R.id.btn_ok);
         btnGuardar = (Button) findViewById(R.id.btn_guardar);
+        btnPrueba = (Button) findViewById(R.id.btn_prueba);
+        btnPrueba2 = (Button) findViewById(R.id.btn_prueba2);
 
         btnOk.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);
+        btnPrueba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Boton de prueba", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         Log.e("MyLog", "OnCreate");
     }
@@ -93,13 +103,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (name.isEmpty()) {
                     Snackbar.make(view, "Ingresa un nombre porfis", Snackbar.LENGTH_SHORT).show();
                 } else {
-                    userName.setText("Usuario: "+ name);
+                    userName.setText("Usuario: " + name);
                 }
 
                 break;
-
         }
 
 
+    }
+
+    public void botonPuchado(View view) {
+        Toast.makeText(this, "Segundo boton de prueba", Toast.LENGTH_SHORT).show();
     }
 }

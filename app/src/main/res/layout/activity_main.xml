@@ -34,4 +34,20 @@
         android:layout_gravity="center"
         android:text="Guardar" />
 
+    <Button
+        android:id="@+id/btn_prueba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Boton de prueba" />
+
+    <Button
+        android:id="@+id/btn_prueba2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Boton de prueba2"
+        android:onClick="botonPuchado"/>
+
+
 </LinearLayout>
