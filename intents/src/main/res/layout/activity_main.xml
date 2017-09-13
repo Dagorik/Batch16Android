@@ -34,5 +34,42 @@
         android:layout_gravity="center"
         android:text="Hacer llamada" />
 
+    <Button
+        android:id="@+id/btn_streetview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Abrir Street View" />
+
+    <Button
+        android:id="@+id/btn_escoger_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Escoger App" />
+
+    <Button
+        android:id="@+id/btn_for_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="For Result" />
+
+
+    <Button
+        android:id="@+id/btn_foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Tomar foto" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent" />
+
 
 </LinearLayout>
