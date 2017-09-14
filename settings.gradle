@@ -1,1 +1,1 @@
-include ':app', ':layouts', ':intents'
+include ':app', ':layouts', ':intents', ':runtimepermision'
