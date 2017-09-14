@@ -1,11 +1,13 @@
 package batch16.android.devf.com.runtimepermision;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,7 +41,25 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
-//
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+            builder.setTitle("Negaste el permiso de la camara")
+                    .setMessage("Esta app no sirve sin ese permiso")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    }).setCancelable(false)
+                    .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            //Volver a pregunar si acepta los permisos.
+                            Toast.makeText(MainActivity.this,
+                                    "No puedes salir de esta actividad", Toast.LENGTH_SHORT).show();
+                        }
+                    }).show();
 
             if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.CAMERA)) {
                 Log.e("MyLog", "2 if");
