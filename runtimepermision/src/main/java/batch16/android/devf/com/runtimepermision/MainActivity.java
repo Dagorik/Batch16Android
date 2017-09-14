@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }).show();
 
+
             if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.CAMERA)) {
                 Log.e("MyLog", "2 if");
 
