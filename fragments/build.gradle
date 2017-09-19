@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.1"
 
     defaultConfig {
-        applicationId "batch16.android.devf.com.runtimepermision"
+        applicationId "batch16.android.devf.com.fragments"
         minSdkVersion 22
         targetSdkVersion 26
         versionCode 1
@@ -29,7 +29,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.android.support:support-v4:26.+'
     testCompile 'junit:junit:4.12'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

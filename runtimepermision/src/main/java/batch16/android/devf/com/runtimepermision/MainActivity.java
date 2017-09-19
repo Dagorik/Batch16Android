@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
             Log.e("MyLog", requestCode + "");
             if (grantResults.length != 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 //YA se aceptó el permiso
-
                 Log.e("MyLOg", grantResults[0] + "");
                 btnCLick();
                 return;
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                             finish();
                         }
                     }).setCancelable(false)
-                    .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    .setNegativeButton("Preguntar nuevamente los permisos", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             //Volver a pregunar si acepta los permisos.
@@ -105,3 +104,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
