@@ -37,12 +37,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void cargarDatos() {
-        mListNumero.add("1");
-        mListNumero.add("2");
-        mListNumero.add("3");
-        mListNumero.add("4");
-        mListNumero.add("5");
-        mListNumero.add("6");
+        mListNumero.add("DAVID");
+        mListNumero.add("SAUL");
+        mListNumero.add("TAVO");
+        mListNumero.add("ISRA");
+        mListNumero.add("RAUL");
+        mListNumero.add("ANDROID");
     }
 
     private void initView() {

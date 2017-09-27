@@ -31,7 +31,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_question, container, false);
+
         pregunta = (TextView) view.findViewById(R.id.tv_pregunta);
         btnTrue = (Button) view.findViewById(R.id.btn_true);
         btnFalse = (Button) view.findViewById(R.id.btn_false);
@@ -49,9 +51,13 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.btn_true:
                 respuesta = 1;
+                btnTrue.setBackgroundResource(R.color.colorTrue);
+                btnFalse.setBackgroundResource(R.color.colorAmbar);
                 break;
             case R.id.btn_false:
                 respuesta = 0;
+                btnFalse.setBackgroundResource(R.color.colorFalse);
+                btnTrue.setBackgroundResource(R.color.colorAmbar);
                 break;
 
         }

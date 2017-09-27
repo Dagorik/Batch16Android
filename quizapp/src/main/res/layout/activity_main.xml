@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context="batch16.android.devf.com.quizapp.MainActivity">
 
@@ -19,20 +20,22 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-
-        <Button
-            android:id="@+id/btn_izquierda"
+        <ImageView
+            android:id="@+id/iv_left"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="IZQUIERDA" />
+            android:src="@drawable/ic_chevron_left_white_48dp"
+            android:tint="@color/colorAccent"
+            android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/btn_derecha"
+        <ImageView
+            android:id="@+id/iv_right"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="DERECHA " />
+            android:src="@drawable/ic_chevron_right_white_48dp"
+            android:tint="@color/colorAccent"
+            android:layout_weight="1" />
+
     </LinearLayout>
 
 </LinearLayout>
