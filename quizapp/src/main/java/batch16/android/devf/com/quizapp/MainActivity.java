@@ -1,5 +1,6 @@
 package batch16.android.devf.com.quizapp;
 
+import android.content.SharedPreferences;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+
             case R.id.iv_left:
                 if (preguntasPosicion > 0) {
                     cambiarFragment(preguntasPosicion--);
@@ -81,8 +83,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     respuesatsCorrectas++;
                 }
 
-                if (preguntasPosicion == listPreguntas.size()-1) {
-                    Toast.makeText(this, "Tus respuestas correctas fueron " + respuesatsCorrectas, Toast.LENGTH_SHORT).show();
+                if (preguntasPosicion == listPreguntas.size() - 1) {
+
+                    //Obtener datos por el SharedPreferences
+                    SharedPreferences preferences = this.getSharedPreferences("preferenciasQuiz",MODE_PRIVATE);
+                    String usuario = preferences.getString("USUARIO","USUARIO GENERICO");
+                    Toast.makeText(this, "Tus respuestas correctas fueron " + respuesatsCorrectas + " user: " + usuario , Toast.LENGTH_SHORT).show();
                     preguntasPosicion = 0;
                 }
 
@@ -93,3 +99,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 }
+ 
