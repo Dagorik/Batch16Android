@@ -1,1 +1,1 @@
-include ':app', ':layouts', ':intents', ':runtimepermision', ':fragments', ':quizapp', ':realmdatabase'
+include ':app', ':layouts', ':intents', ':runtimepermision', ':fragments', ':quizapp', ':realmdatabase', ':javabasico', ':animaciones'

@@ -3,9 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Batch16Android.iml" filepath="$PROJECT_DIR$/Batch16Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animaciones/animaciones.iml" filepath="$PROJECT_DIR$/animaciones/animaciones.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragments/fragments.iml" filepath="$PROJECT_DIR$/fragments/fragments.iml" />
       <module fileurl="file://$PROJECT_DIR$/intents/intents.iml" filepath="$PROJECT_DIR$/intents/intents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabasico/javabasico.iml" filepath="$PROJECT_DIR$/javabasico/javabasico.iml" />
       <module fileurl="file://$PROJECT_DIR$/layouts/layouts.iml" filepath="$PROJECT_DIR$/layouts/layouts.iml" />
       <module fileurl="file://$PROJECT_DIR$/quizapp/quizapp.iml" filepath="$PROJECT_DIR$/quizapp/quizapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/realmdatabase/realmdatabase.iml" filepath="$PROJECT_DIR$/realmdatabase/realmdatabase.iml" />

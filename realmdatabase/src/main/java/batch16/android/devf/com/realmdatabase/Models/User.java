@@ -55,4 +55,17 @@ public class User extends RealmObject {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", option=" + option +
+                ", edad=" + edad +
+                '}';
+    }
+
 }
