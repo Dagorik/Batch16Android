@@ -10,10 +10,9 @@ public class DescriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
-
+        TextView peso = (TextView) findViewById(R.id.peso);
 
         String mPeso = getIntent().getStringExtra("PESO");
-        TextView peso = (TextView) findViewById(R.id.peso);
         peso.setText(mPeso);
 
     }

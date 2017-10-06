@@ -17,6 +17,8 @@
             <option value="$PROJECT_DIR$/quizapp" />
             <option value="$PROJECT_DIR$/realmdatabase" />
             <option value="$PROJECT_DIR$/recyclerview" />
+            <option value="$PROJECT_DIR$/retrofit" />
+            <option value="$PROJECT_DIR$/retrofitmodels" />
             <option value="$PROJECT_DIR$/runtimepermision" />
           </set>
         </option>

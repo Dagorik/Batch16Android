@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         pesoList.add(new Peso("01/10/2018","76"));
         pesoList.add(new Peso("01/11/2018","75"));
         pesoList.add(new Peso("01/12/2018","74"));
+
     }
 
     private void initAdapter() {

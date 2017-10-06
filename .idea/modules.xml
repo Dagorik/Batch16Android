@@ -12,6 +12,8 @@
       <module fileurl="file://$PROJECT_DIR$/quizapp/quizapp.iml" filepath="$PROJECT_DIR$/quizapp/quizapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/realmdatabase/realmdatabase.iml" filepath="$PROJECT_DIR$/realmdatabase/realmdatabase.iml" />
       <module fileurl="file://$PROJECT_DIR$/recyclerview/recyclerview.iml" filepath="$PROJECT_DIR$/recyclerview/recyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retrofit/retrofit.iml" filepath="$PROJECT_DIR$/retrofit/retrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retrofitmodels/retrofitmodels.iml" filepath="$PROJECT_DIR$/retrofitmodels/retrofitmodels.iml" />
       <module fileurl="file://$PROJECT_DIR$/runtimepermision/runtimepermision.iml" filepath="$PROJECT_DIR$/runtimepermision/runtimepermision.iml" />
     </modules>
   </component>
