@@ -2,14 +2,20 @@ package batch16.android.devf.com.retrofitmodels;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import batch16.android.devf.com.retrofitmodels.adapter.BookAdapter;
 import batch16.android.devf.com.retrofitmodels.api.ServiceGenerator;
 import batch16.android.devf.com.retrofitmodels.api.ServicesInterface;
 import batch16.android.devf.com.retrofitmodels.models.Author;
+import batch16.android.devf.com.retrofitmodels.models.Book;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -17,6 +23,9 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private ServicesInterface servicesInterface;
+    private List<Book> listLibros = new ArrayList<>();
+    RecyclerView recyclerView;
+    BookAdapter bookAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +36,45 @@ public class MainActivity extends AppCompatActivity {
 
 
         //loadDataFromSingleton();
-        createAuthor();
+        //createAuthor();
+
+        listaLibros();
+
+    }
+
+    private void listaLibros() {
+        servicesInterface.getAllBooks().enqueue(new Callback<List<Book>>() {
+            @Override
+            public void onResponse(Call<List<Book>> call, Response<List<Book>> response) {
+                listLibros = response.body();
+                Log.e("MyListLibros", listLibros.toString());
+
+                setUpRecycler(listLibros);
+                bookAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Book>> call, Throwable t) {
+                Log.e("MyListLibrosError", t.getMessage());
+            }
+        });
+    }
+
+    private void setUpRecycler(List<Book> bookList){
+        recyclerView = (RecyclerView) findViewById(R.id.rv_books);
+
+        GridLayoutManager layoutManager = new GridLayoutManager(this,2);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+
+
+        bookAdapter = new BookAdapter(bookList);
+
+        recyclerView.setAdapter(bookAdapter);
+
     }
 
     private void createAuthor() {
@@ -80,4 +127,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 }

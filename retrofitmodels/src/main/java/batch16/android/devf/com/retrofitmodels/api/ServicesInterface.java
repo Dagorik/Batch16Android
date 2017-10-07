@@ -3,6 +3,7 @@ package batch16.android.devf.com.retrofitmodels.api;
 import java.util.List;
 
 import batch16.android.devf.com.retrofitmodels.models.Author;
+import batch16.android.devf.com.retrofitmodels.models.Book;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -20,4 +21,6 @@ public interface ServicesInterface {
     @POST("/api/v1/authors/")
     Call<Author> createAuthor(@Body Author author);
 
+    @GET("/api/v1/books/")
+    Call<List<Book>> getAllBooks();
 }
