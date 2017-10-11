@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/animaciones/animaciones.iml" filepath="$PROJECT_DIR$/animaciones/animaciones.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/autocompletemaps/autocompletemaps.iml" filepath="$PROJECT_DIR$/autocompletemaps/autocompletemaps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/firebase/firebase.iml" filepath="$PROJECT_DIR$/firebase/firebase.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragments/fragments.iml" filepath="$PROJECT_DIR$/fragments/fragments.iml" />
       <module fileurl="file://$PROJECT_DIR$/intents/intents.iml" filepath="$PROJECT_DIR$/intents/intents.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabasico/javabasico.iml" filepath="$PROJECT_DIR$/javabasico/javabasico.iml" />
